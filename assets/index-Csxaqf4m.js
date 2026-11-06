@@ -20452,6 +20452,24 @@ const xp = [
   ],
   CS = [
     {
+      name: "SupplyHub – B2B Supply Chain Platform",
+      description:
+        "Full-stack B2B supply chain management platform built with five Spring Boot microservices, Spring Cloud Gateway, and a React/TypeScript dashboard. Features catalog, inventory, customer, order, and notification management. Deployed on AWS EC2 using Docker with HTTPS.",
+      tech: [
+        "Java",
+        "Spring Boot",
+        "Microservices",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker",
+        "AWS",
+      ],
+      link: "https://github.com/himanshupatil208/supplyhub-platform",
+      demo: "https://supplyhub.duckdns.org",
+      icon: SS,
+    },
+    {
       name: "Distributed E-Commerce Platform",
       description:
         "Distributed e-commerce backend built with Spring Boot microservices (Product, Order, Inventory) and a centralized Spring Cloud API Gateway. 15+ RESTful APIs across a layered Controller–Service–Repository architecture.",
@@ -21160,14 +21178,34 @@ function RS() {
                                 className: "text-white",
                               }),
                             }),
-                            U.jsx("a", {
-                              href: f.link,
-                              target: "_blank",
-                              rel: "noopener noreferrer",
-                              className:
-                                "text-[#71717A] hover:text-[#6366F1] transition-colors",
-                              children: U.jsx(sS, { size: 18 }),
+                            
+                            U.jsxs("div", {
+                              className: "flex items-center gap-3",
+                              children: [
+                                U.jsx("a", {
+                                  href: f.link,
+                                  target: "_blank",
+                                  rel: "noopener noreferrer",
+                                  title: "View source on GitHub",
+                                  "aria-label": "View " + f.name + " on GitHub",
+                                  className:
+                                    "text-[#71717A] hover:text-[#6366F1] transition-colors",
+                                  children: U.jsx(Sp, { size: 18 }),
+                                }),
+                                f.demo &&
+                                  U.jsx("a", {
+                                    href: f.demo,
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    title: "Open live demo",
+                                    "aria-label": "Open " + f.name + " live demo",
+                                    className:
+                                      "text-[#71717A] hover:text-[#6366F1] transition-colors",
+                                    children: U.jsx(sS, { size: 18 }),
+                                  }),
+                              ],
                             }),
+
                           ],
                         }),
                         U.jsx("h3", {
